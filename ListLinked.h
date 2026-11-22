@@ -87,7 +87,7 @@ class ListLinked : public List<T> {
 		}
 
 		//Devuelve la posicion de la primra aparicion de e
-		int serch(T e) override {
+		int search(T e) override {
 			Node<T>* aux = first;
 			int pos = 0;
 			while(aux != nullptr) {
