@@ -11,7 +11,7 @@ class Node {
 		
 		//Constructor, si no se le pasa next, vale nullptr
 		Node(T data, Node<T>* next = nullptr) {
-			this->data= next; //this->dara = el atributo; data = el parametro
+			this->data= data; //this->dara = el atributo; data = el parametro
 			this->next= next;
 		}
 
