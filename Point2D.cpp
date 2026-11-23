@@ -25,8 +25,7 @@ bool Point2D::operator!=(const Point2D &other){
 	return !(*this == other);
 }
 
-//preguntar el formato
 std::ostream& operator<<(std::ostream &out, const Point2D &p){
-	out<<"("<< p.x <<", "<< p.y << ")";
+	out<<"("<< p.x <<","<< p.y << ")";
 	return out;
 }
