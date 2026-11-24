@@ -25,7 +25,7 @@ Rectangle::Rectangle() : Shape() {
 // Con color y vértices. Se comprueba antes del new, para no perder memoria si lanza la excepción
 Rectangle::Rectangle(std::string color, Point2D* vertices) : Shape(color) {
 	if (!check(vertices)) {
-		throw std::invalid_argument("Los vértices no forman un rectángulo");
+		throw std::invalid_argument("Provided vertices do not build a valid rectangle!");
 	}
 	vs = new Point2D[N_VERTICES];
 	for (int i = 0; i < N_VERTICES; i++) {
@@ -61,7 +61,7 @@ Point2D Rectangle::operator[](int ind) const {
 //Modificadores
 void Rectangle::set_vertices(Point2D* vertices) {
 	if (!check(vertices)) {
-		throw std::invalid_argument("Los vértices no forman un rectángulo");
+		throw std::invalid_argument("Provided vertices do not build a valid rectangle!");
 	}
 	for (int i = 0; i < N_VERTICES; i++) {
 		vs[i] = vertices[i];
