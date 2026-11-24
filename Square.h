@@ -22,6 +22,7 @@ class Square : public Rectangle {
 		//Metodos de rectangle q se sobreescriben
 		void set_vertices(Point2D* vertices) override;
 		void print() override;
+		friend std::ostream& operator<<(std::ostream &out, const Square &square);
 
 };
 

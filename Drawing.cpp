@@ -2,6 +2,7 @@
 #include "ListLinked.h"
 #include "Circle.h"
 #include "Square.h"
+#include <iostream>
 
 //Constructor elige ListLinked como implementacion d la lista
 Drawing::Drawing() {
@@ -9,8 +10,10 @@ Drawing::Drawing() {
 }
 
 //Destructor, libera la lista
-//Preguntar si Drawing tmb debe borrar las figuras (cada Shape*)???
 Drawing::~Drawing(){
+	for(int i = 0; i < shapes->size(); i++){
+		delete shapes->get(i);
+	}
 	delete shapes;
 }
 
@@ -24,6 +27,7 @@ void Drawing::add_back(Shape* shape){
 
 //Reaprovecha el print d cada figura
 void Drawing::print_all(){
+	std::cout << "Drawing contents:" << std::endl;
 	for(int i = 0; i < shapes->size(); i++){
 		shapes->get(i)->print();
 	}

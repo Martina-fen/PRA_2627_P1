@@ -100,7 +100,7 @@ void Rectangle::translate(double incX, double incY) {
 
 // print aprovecha el operador <<
 void Rectangle::print() {
-	std::cout << this << std::endl;
+	std::cout << *this << std::endl;
 }
 
 //preguntar formato de impresión
